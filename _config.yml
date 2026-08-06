@@ -1,0 +1,12 @@
+title: Ma Laboratory
+description: >-
+  Research resource site for the Ma Laboratory, Division of Surgical Sciences,
+  University of Virginia School of Medicine — MG53 (TRIM72), MG29, and
+  citrullinated histone H3 (CitH3) / NETosis biology.
+baseurl: ""
+url: ""
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+exclude:
+  - README.md

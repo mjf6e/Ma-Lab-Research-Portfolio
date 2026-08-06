@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} · {% endif %}Ma Laboratory</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="{{ '/' | relative_url }}" style="text-decoration:none;">
+      <span class="dot"></span> Ma Laboratory <span class="sub">UVA Surgical Sciences</span>
+    </a>
+    <div class="navlinks">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/research/mg53.html' | relative_url }}" {% if page.url contains 'mg53' %}class="active"{% endif %}>MG53</a>
+      <a href="{{ '/research/netosis-cith3.html' | relative_url }}" {% if page.url contains 'netosis' %}class="active"{% endif %}>CitH3 / NETosis</a>
+      <a href="{{ '/research/mg29.html' | relative_url }}" {% if page.url contains 'mg29' %}class="active"{% endif %}>MG29</a>
+      <a href="{{ '/publications.html' | relative_url }}" {% if page.url contains 'publications' %}class="active"{% endif %}>Publications</a>
+      <a href="{{ '/funding.html' | relative_url }}" {% if page.url contains 'funding' %}class="active"{% endif %}>Funding</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>Ma Laboratory</h5>
+        <p style="max-width:32ch;color:#9aa5bd;">Division of Surgical Sciences, Department of Surgery<br>University of Virginia School of Medicine<br>Charlottesville, VA</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h5>Research</h5>
+          <ul>
+            <li><a href="{{ '/research/mg53.html' | relative_url }}">MG53 / TRIM72</a></li>
+            <li><a href="{{ '/research/netosis-cith3.html' | relative_url }}">CitH3 &amp; NETosis</a></li>
+            <li><a href="{{ '/research/mg29.html' | relative_url }}">MG29</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li>
+            <li><a href="{{ '/funding.html' | relative_url }}">Funding</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jianjie+Ma%5BAuthor%5D" target="_blank" rel="noopener">Full PubMed record ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="https://med.virginia.edu/faculty/faculty-listing/qga3zx/" target="_blank" rel="noopener">Dr. Jianjie Ma — faculty profile ↗</a></li>
+            <li><a href="https://www.jianjiemalab.com/" target="_blank" rel="noopener">Lab home page ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="fineprint">
+      This site is a student- and lab-facing research summary, not a substitute for the primary literature. Publication data drawn from PubMed; grant descriptions summarized from lab materials and institutional announcements, linked at source.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
