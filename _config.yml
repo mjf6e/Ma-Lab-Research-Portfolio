@@ -6,7 +6,3 @@ description: >-
 baseurl: ""
 url: ""
 markdown: kramdown
-plugins:
-  - jekyll-relative-links
-exclude:
-  - README.md
