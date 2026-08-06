@@ -44,3 +44,5 @@ Publication and funding data were compiled from PubMed (`Jianjie Ma[Author]`
 combined with each protein/pathway name) and from public institutional
 announcements, linked at the point of use. This site summarizes and links to
 primary sources; it does not reproduce full text from any external source.
+
+<!-- build trigger: forcing a fresh Pages deployment after a stuck queued run -->
