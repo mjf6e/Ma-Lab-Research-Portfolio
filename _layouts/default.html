@@ -9,6 +9,11 @@
 </head>
 <body>
 
+<div class="announce">
+  <a href="{{ '/research/netosis-cith3.html' | relative_url }}">
+    <span class="mono" style="color:#fff;">New ↗</span> hCitH3-mAb, the lab's first-in-class anti-CitH3 antibody, has received FDA authorization for first-in-human trials — read more →
+  </a>
+</div>
 <header class="site-header">
   <nav class="nav">
     <a class="brand" href="{{ '/' | relative_url }}" style="text-decoration:none;">
@@ -21,6 +26,8 @@
       <a href="{{ '/research/mg29.html' | relative_url }}" {% if page.url contains 'mg29' %}class="active"{% endif %}>MG29</a>
       <a href="{{ '/publications.html' | relative_url }}" {% if page.url contains 'publications' %}class="active"{% endif %}>Publications</a>
       <a href="{{ '/funding.html' | relative_url }}" {% if page.url contains 'funding' %}class="active"{% endif %}>Funding</a>
+      <a href="{{ '/team.html' | relative_url }}" {% if page.url contains 'team' %}class="active"{% endif %}>Team</a>
+      <a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>About the PI</a>
     </div>
   </nav>
 </header>
@@ -56,7 +63,9 @@
         <div>
           <h5>Contact</h5>
           <ul>
-            <li><a href="https://med.virginia.edu/faculty/faculty-listing/qga3zx/" target="_blank" rel="noopener">Dr. Jianjie Ma — faculty profile ↗</a></li>
+            <li><a href="{{ '/about.html' | relative_url }}">About the PI</a></li>
+            <li><a href="{{ '/team.html' | relative_url }}">Lab team</a></li>
+            <li><a href="mailto:Jianjie.Ma@virginia.edu">Jianjie.Ma@virginia.edu</a></li>
             <li><a href="https://www.jianjiemalab.com/" target="_blank" rel="noopener">Lab home page ↗</a></li>
           </ul>
         </div>
