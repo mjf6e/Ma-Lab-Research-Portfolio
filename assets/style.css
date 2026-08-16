@@ -64,7 +64,13 @@ li{ margin-bottom:.35em; }
 .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:var(--max); margin:0 auto; }
 .brand{ display:flex; align-items:center; gap:10px; color:#fff; font-family:'Fraunces',serif; font-weight:600; font-size:1.08rem; }
 .brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 4px rgba(217,102,43,.25); }
-.brand-logo{ width:30px; height:30px; flex-shrink:0; }
+.brand-logo-wrap{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; border-radius:50%;
+  background:#fff; flex-shrink:0;
+  box-shadow:0 0 0 1px rgba(255,255,255,.4);
+}
+.brand-logo{ width:26px; height:26px; flex-shrink:0; display:block; object-fit:contain; border-radius:50%; }
 .brand span.sub{ color:#9aa5bd; font-family:'Inter',sans-serif; font-weight:500; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; margin-left:4px; }
 .navlinks{ display:flex; gap:22px; flex-wrap:wrap; }
 .navlinks a{ color:#c9cfdd; font-size:.86rem; font-weight:500; }
