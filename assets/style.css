@@ -95,7 +95,6 @@ li{ margin-bottom:.35em; }
 .hero-eyebrow{ color:var(--signal); }
 .hero h1{ color:#fdfbf5; max-width:16ch; }
 .hero p.lede{ color:#c7cede; font-size:1.12rem; max-width:56ch; }
-.hero-net{ position:absolute; inset:0; opacity:.5; z-index:1; }
 
 .hero-cta{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
 .btn{
