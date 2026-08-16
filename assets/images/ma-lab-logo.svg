@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <circle cx="150" cy="150" r="132" fill="none" stroke="#FFDD00" stroke-width="11"/>
+  <polyline points="58,240 58,62 150,158 242,62 242,240"
+    fill="none" stroke="#222D4B" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="95,240 150,80 205,240"
+    fill="none" stroke="#E57100" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="278" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="34">
+    <tspan fill="#222D4B">M</tspan><tspan fill="#E57100">A</tspan><tspan fill="#222D4B" dx="6">LAB</tspan>
+  </text>
+</svg>
