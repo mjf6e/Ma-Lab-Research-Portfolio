@@ -10,8 +10,8 @@
   --bone:     #f6f3ec;
   --bone-2:   #ece6d8;
   --paper:    #fffdf8;
-  --signal:   #d9662b;
-  --signal-2: #b84f1f;
+  --signal:   #e57200;
+  --signal-2: #ad5b00;
   --teal:     #2f6e63;
   --slate:    #4a5265;
   --line:     #d9d2c1;
@@ -63,7 +63,7 @@ li{ margin-bottom:.35em; }
 }
 .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:var(--max); margin:0 auto; }
 .brand{ display:flex; align-items:center; gap:10px; color:#fff; font-family:'Source Serif 4',serif; font-weight:600; font-size:1.08rem; }
-.brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 4px rgba(217,102,43,.25); }
+.brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 4px rgba(229,114,0,.25); }
 .brand-logo-wrap{
   display:inline-flex; align-items:center; justify-content:center;
   width:34px; height:34px; border-radius:50%;
@@ -140,7 +140,7 @@ section.tight{ padding:44px 0; }
   letter-spacing:.05em; padding:3px 9px; border-radius:20px;
   background:rgba(47,110,99,.12); color:var(--teal); border:1px solid rgba(47,110,99,.25);
 }
-.tag.orange{ background:rgba(217,102,43,.12); color:var(--signal-2); border-color:rgba(217,102,43,.28); }
+.tag.orange{ background:rgba(229,114,0,.12); color:var(--signal-2); border-color:rgba(229,114,0,.28); }
 
 /* ---- Stat strip ---- */
 .stats{ display:flex; gap:0; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--paper); }
