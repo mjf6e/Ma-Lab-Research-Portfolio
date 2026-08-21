@@ -98,8 +98,8 @@ li{ margin-bottom:.35em; }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:48px;
+  grid-template-columns:0.9fr 1.15fr;
+  gap:40px;
   align-items:center;
 }
 .hero-copy{ max-width:56ch; }
@@ -108,11 +108,11 @@ li{ margin-bottom:.35em; }
 .hero-photos-frame{
   position:relative;
   width:100%;
-  padding-top:72%;
-  border-radius:10px;
+  padding-top:80%;
+  border-radius:12px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 26px 54px rgba(0,0,0,.38);
+  box-shadow:0 30px 64px rgba(0,0,0,.42);
   background:var(--ink-2);
 }
 .hero-photo{
@@ -122,6 +122,8 @@ li{ margin-bottom:.35em; }
   height:100%;
   object-fit:cover;
   opacity:0;
+  transform-origin:center center;
+  will-change:transform, opacity;
   animation:heroFade 24s infinite;
 }
 .hero-photo:nth-child(1){ animation-delay:0s; }
@@ -131,22 +133,25 @@ li{ margin-bottom:.35em; }
 .hero-photo:nth-child(5){ animation-delay:16s; }
 .hero-photo:nth-child(6){ animation-delay:20s; }
 
+/* Ken Burns: each photo drifts into a slow zoom while it's on screen,
+   then fades out slightly more zoomed than it started. Because opacity
+   is 0 at both 0% and 100%, the scale reset at loop time is invisible. */
 @keyframes heroFade{
-  0%{ opacity:0; }
-  4%{ opacity:1; }
-  20%{ opacity:1; }
-  25%{ opacity:0; }
-  100%{ opacity:0; }
+  0%{   opacity:0; transform:scale(1);     }
+  4%{   opacity:1; transform:scale(1.03);  }
+  20%{  opacity:1; transform:scale(1.11);  }
+  25%{  opacity:0; transform:scale(1.13);  }
+  100%{ opacity:0; transform:scale(1.13);  }
 }
 
 @media (prefers-reduced-motion:reduce){
-  .hero-photo{ animation:none; opacity:0; }
+  .hero-photo{ animation:none; opacity:0; transform:none; }
   .hero-photo:first-child{ opacity:1; }
 }
 
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; gap:28px; }
-  .hero-photos-frame{ padding-top:60%; }
+  .hero-photos-frame{ padding-top:66%; }
 }
 
 .hero-cta{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
