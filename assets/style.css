@@ -122,13 +122,14 @@ li{ margin-bottom:.35em; }
   height:100%;
   object-fit:cover;
   opacity:0;
-  animation:heroFade 20s infinite;
+  animation:heroFade 24s infinite;
 }
 .hero-photo:nth-child(1){ animation-delay:0s; }
 .hero-photo:nth-child(2){ animation-delay:4s; }
 .hero-photo:nth-child(3){ animation-delay:8s; }
 .hero-photo:nth-child(4){ animation-delay:12s; }
 .hero-photo:nth-child(5){ animation-delay:16s; }
+.hero-photo:nth-child(6){ animation-delay:20s; }
 
 @keyframes heroFade{
   0%{ opacity:0; }
