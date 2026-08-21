@@ -61,8 +61,8 @@ li{ margin-bottom:.35em; }
   backdrop-filter:blur(6px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
-.nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:var(--max); margin:0 auto; }
-.brand{ display:flex; align-items:center; gap:10px; color:#fff; font-family:'Source Serif 4',serif; font-weight:600; font-size:1.08rem; }
+.nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:var(--max); margin:0 auto; flex-wrap:nowrap; }
+.brand{ display:flex; align-items:center; gap:10px; color:#fff; font-family:'Source Serif 4',serif; font-weight:600; font-size:1.08rem; flex-shrink:0; }
 .brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 4px rgba(229,114,0,.25); }
 .brand-logo-wrap{
   display:inline-flex; align-items:center; justify-content:center;
@@ -71,16 +71,23 @@ li{ margin-bottom:.35em; }
   box-shadow:0 0 0 1px rgba(255,255,255,.4);
 }
 .brand-logo{ width:26px; height:26px; flex-shrink:0; display:block; object-fit:contain; border-radius:50%; }
-.brand span.sub{ color:#9aa5bd; font-family:'Inter',sans-serif; font-weight:500; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; margin-left:4px; }
-.navlinks{ display:flex; gap:22px; flex-wrap:wrap; }
-.navlinks a{ color:#c9cfdd; font-size:.86rem; font-weight:500; }
+.brand span.sub{ color:#9aa5bd; font-family:'Inter',sans-serif; font-weight:500; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; margin-left:4px; white-space:nowrap; }
+.navlinks{ display:flex; gap:16px; flex-wrap:nowrap; }
+.navlinks a{ color:#c9cfdd; font-size:.83rem; font-weight:500; white-space:nowrap; }
 .navlinks a:hover, .navlinks a.active{ color:#fff; text-decoration:none; }
 .navlinks a.active{ color:var(--signal); }
 .nav-toggle{ display:none; }
 
-@media (max-width:760px){
+@media (max-width:1080px){
+  .navlinks{ gap:12px; }
+  .navlinks a{ font-size:.78rem; }
+  .brand span.sub{ display:none; }
+}
+
+@media (max-width:900px){
   .nav{ flex-wrap:wrap; gap:10px; }
-  .navlinks{ gap:14px; font-size:.8rem; width:100%; }
+  .navlinks{ gap:14px; flex-wrap:wrap; width:100%; }
+  .navlinks a{ font-size:.8rem; }
 }
 
 /* ---- Hero ---- */
