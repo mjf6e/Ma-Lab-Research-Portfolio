@@ -1,0 +1,39 @@
+name: Deploy Jekyll site to DreamHost
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DREAMHOST_SSH_KEY }}
+
+      - name: Add DreamHost to known hosts
+        run: ssh-keyscan -H ${{ secrets.DREAMHOST_SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Rsync site to DreamHost
+        run: |
+          rsync -avz --delete \
+            -e "ssh -p ${{ secrets.DREAMHOST_SSH_PORT || '22' }}" \
+            _site/ \
+            ${{ secrets.DREAMHOST_SSH_USER }}@${{ secrets.DREAMHOST_SSH_HOST }}:${{ secrets.DREAMHOST_TARGET_DIR }}
