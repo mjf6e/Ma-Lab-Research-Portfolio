@@ -200,6 +200,11 @@ section.tight{ padding:44px 0; }
 .card p{ margin-bottom:.6em; font-size:.95rem; }
 .card a.more{ font-weight:600; font-size:.85rem; }
 
+.card.person .headshot{
+  width:84px; height:84px; border-radius:50%; object-fit:cover;
+  margin-bottom:14px; border:2px solid var(--line); background:var(--bone-2);
+}
+
 .tag{
   font-family:'Source Serif 4', Georgia, serif; font-style:italic; font-weight:600; font-size:.76rem; text-transform:uppercase;
   letter-spacing:.05em; padding:3px 9px; border-radius:20px;
